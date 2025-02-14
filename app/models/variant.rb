@@ -1,5 +1,5 @@
 class Variant < ApplicationRecord
   belongs_to :product
 
-  enum :size, [ :s, :m, :l, :xl ]
+  enum :size, [ :small, :medium, :large, :extra_large ]
 end
