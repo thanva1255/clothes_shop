@@ -1,7 +1,9 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+shirt:
+  name: Shirt
 
-one:
-  name: MyString
+pants:
+  name: Pants
 
-two:
-  name: MyString
+jacket:
+  name: Jacket
+  

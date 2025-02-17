@@ -1,11 +1,59 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+premium_cali_tee:
+  name: Premium Cali Tee
+  description: A wool tee with classic 3-stripes details.
+  collection: originals
+  category: shirt
 
-one:
-  name: MyString
-  image_url: MyString
-  description: MyString
+techfit_compression:
+  name: Techfit Compression
+  description: A compression training tee made in part with recycled materials.
+  collection: training
+  category: shirt
 
-two:
-  name: MyString
-  image_url: MyString
-  description: MyString
+skate_chino_pants:
+  name: Skate Chino Pants
+  description: Modern chino pants built for sketeboarding.
+  collection: originals
+  category: pants
+
+pre_loved_pants:
+  name: Pre Loved Pants
+  description: 90S-inspired sweat pants.
+  collection: originals
+  category: pants
+
+adicolor_classics_beckenbauer_track_pants:
+  name: Adicolor Classics Beckenbauer Track Pants
+  description: Archival track pants made with a blend of recycled.
+  collection: originals
+  category: pants
+
+all_szn_fleece_regular_tapered_pants:
+  name: ALL SZN Fleece Regular Tapered Pants
+  description: soft, tapered pants made for all-day comfort.
+  collection: sportswear
+  category: pants
+
+arsenal_terrace_icons_track_pants:
+  name: Arsenal Terrace Icons Track Pants
+  description: Arsenal terrace icons jersey.
+  collection: football
+  category: pants
+
+brasil_power_of_three_track_jacket:
+  name: Brasil Power Of Three Track Jacket
+  description: A celebration of brasilian skateboarding culture.
+  collection: originals
+  category: jacket
+
+real_madrid_vrct_jacket:
+  name: Real Madrid VRCT Jacket (gender neutral)
+  description: A real madrid jacket that shouts your support.
+  collection: football
+  category: jacket
+
+adizero_essentials_running_singlet:
+  name: Adizero Essentials Running Singlet
+  description: A lightweight running singlet made with recycled materials.
+  collection: running
+  category: shirt

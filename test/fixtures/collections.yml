@@ -1,9 +1,19 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+originals:
+  name: Originals
+  description: NULL
 
-one:
-  name: MyString
-  description: MyString
+training:
+  name: Training
+  description: NULL
 
-two:
-  name: MyString
-  description: MyString
+football:
+  name: Football
+  description: NULL
+
+sportswear:
+  name: Sportswear
+  description: NULL
+
+running:
+  name: Running
+  description: NULL

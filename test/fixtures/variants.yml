@@ -1,9 +1,113 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+small_premiumcalitee:
+  size: 0
+  product: premium_cali_tee
+  price: 2700
+  stock: 30
 
-one:
-  size: MyString
-  product: one
+medium_premium_cali_tee:
+  size: 1
+  product: premium_cali_tee
+  price: 2700
+  stock: 26
 
-two:
-  size: MyString
-  product: two
+large_premium_cali_tee:
+  size: 2
+  product: premium_cali_tee
+  price: 2700
+  stock: 15
+
+extra_large_premium_cali_tee:
+  size: 3
+  product: premium_cali_tee
+  price: 2700
+  stock: 23
+
+small_techfit_compression:
+  size: 0
+  product: techfit_compression
+  price: 1300
+  stock: 40
+
+medium_techfit_compression:
+  size: 1
+  product: techfit_compression
+  price: 1300
+  stock: 22
+
+large_techfit_compression:
+  size: 2
+  product: techfit_compression
+  price: 1300
+  stock: 25
+
+extra_large_techfit_compression:
+  size: 3
+  product: techfit_compression
+  price: 1300
+  stock: 30
+
+small_skate_chino_pants:
+  size: 0
+  product: skate_chino_pants
+  price: 2900
+  stock: 40
+
+medium_skate_chino_pants:
+  size: 1
+  product: skate_chino_pants
+  price: 2900
+  stock: 21
+
+large_skate_chino_pants:
+  size: 2
+  product: skate_chino_pants
+  price: 2900
+  stock: 25
+
+extra_large_skate_chino_pants:
+  size: 3
+  product: skate_chino_pants
+  price: 2900
+  stock: 43
+
+small_pre_loved_pants:
+  size: 0
+  product: pre_loved_pants
+  price: 2900
+  stock: 70
+
+small_adicolor_classics_beckenbauer_track_pants:
+  size: 0
+  product: adicolor_classics_beckenbauer_track_pants
+  price: 2800
+  stock: 100
+
+small_all_szn_fleece_regular_tapered_pants:
+  size: 0
+  product: all_szn_fleece_regular_tapered_pants
+  price: 2000
+  stock: 9
+
+small_all_arsenal_terrace_icons_track_pants:
+  size: 0
+  product: arsenal_terrace_icons_track_pants
+  price: 3600
+  stock: 2
+
+small_brasil_power_of_three_track_jacket:
+  size: 0
+  product: brasil_power_of_three_track_jacket
+  price: 2800
+  stock: 89
+
+small_real_madrid_vrct_jacket:
+  size: 0
+  product: real_madrid_vrct_jacket
+  price: 6500
+  stock: 1
+
+small_adizero_essentials_running_singlet:
+  size: 0
+  product: adizero_essentials_running_singlet
+  price: 1000
+  stock: 1000
