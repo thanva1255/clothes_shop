@@ -18,13 +18,42 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.turbo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.turbo.min.js"></script>
+    <%# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"> %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav>
+      <div class="grid grid-cols-4">
+        <div class="col-span-1">
+          <a href="#">
+            <img src="https://www.pngplay.com/wp-content/uploads/6/Adidas-White-Logo-PNG-Clipart-Background.png" class="nav-logo" alt="Adidas Logo">
+          </a>
+        </div>
+
+        <div class="flyout-container col-span-2">
+          <ul class="flyout-list">
+            <li>
+              <a href="#" class="flyout-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="flyout-link">Product</a>
+            </li>
+
+            <li>
+              <a href="#" class="flyout-link">Collections</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mx-auto mt-10 px-5 flex">
+      <%= yield %>
+    </main>
   </body>
 </html>
