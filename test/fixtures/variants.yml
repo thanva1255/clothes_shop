@@ -3,111 +3,130 @@ small_premiumcalitee:
   product: premium_cali_tee
   price: 2700
   stock: 30
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/20028b4abe2a4d65815dd7c4fecdfd89_9366/Premium_Cali_Tee_Black_JC6361_23_hover_model.jpg
 
 medium_premium_cali_tee:
   size: 1
   product: premium_cali_tee
   price: 2700
   stock: 26
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/d2b96a67bde84121957193578b34ef68_9366/Premium_Cali_Tee_Black_JC6361_25_model.jpg
 
 large_premium_cali_tee:
   size: 2
   product: premium_cali_tee
   price: 2700
   stock: 15
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/1ac3003768c949aea762bd2c3cb6aa63_9366/Premium_Cali_Tee_Black_JC6361_01_laydown.jpg
 
 extra_large_premium_cali_tee:
   size: 3
   product: premium_cali_tee
   price: 2700
   stock: 23
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/e0af76207e29465883d01b9f26cfc535_9366/Premium_Cali_Tee_Black_JC6361_42_detail.jpg
 
 small_techfit_compression:
   size: 0
   product: techfit_compression
   price: 1300
   stock: 40
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ef341ae0c9874ef0bdfcaed300baa0fe_9366/Techfit_Training_Tee_Black_HK2337_01_laydown.jpg
 
 medium_techfit_compression:
   size: 1
   product: techfit_compression
   price: 1300
   stock: 22
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ef341ae0c9874ef0bdfcaed300baa0fe_9366/Techfit_Training_Tee_Black_HK2337_01_laydown.jpg
 
 large_techfit_compression:
   size: 2
   product: techfit_compression
   price: 1300
   stock: 25
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ef341ae0c9874ef0bdfcaed300baa0fe_9366/Techfit_Training_Tee_Black_HK2337_01_laydown.jpg
 
 extra_large_techfit_compression:
   size: 3
   product: techfit_compression
   price: 1300
   stock: 30
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ef341ae0c9874ef0bdfcaed300baa0fe_9366/Techfit_Training_Tee_Black_HK2337_01_laydown.jpg
 
 small_skate_chino_pants:
   size: 0
   product: skate_chino_pants
   price: 2900
   stock: 40
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c7f49c5d54a04dc4958116c522aa0273_9366/3-Stripes_Skate_Chino_Pants_Brown_IU0075_23_hover_model.jpg
 
 medium_skate_chino_pants:
   size: 1
   product: skate_chino_pants
   price: 2900
   stock: 21
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/4d103e3042fd4a83878767c76cac67a6_9366/3-Stripes_Skate_Chino_Pants_Brown_IU0075_25_model.jpg
 
 large_skate_chino_pants:
   size: 2
   product: skate_chino_pants
   price: 2900
   stock: 25
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/76c87efd31964cd2b59b50a2f767d689_9366/3-Stripes_Skate_Chino_Pants_Brown_IU0075_01_laydown.jpg
 
 extra_large_skate_chino_pants:
   size: 3
   product: skate_chino_pants
   price: 2900
   stock: 43
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcec9266174647b989a4c5b8e90928f4_9366/3-Stripes_Skate_Chino_Pants_Brown_IU0075_25_outfit.jpg
 
 small_pre_loved_pants:
   size: 0
   product: pre_loved_pants
   price: 2900
   stock: 70
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ad942224443040a09bb51e8ecee78c24_9366/Pre-Loved_Pants_Green_JC8356_25_model.jpg
 
 small_adicolor_classics_beckenbauer_track_pants:
   size: 0
   product: adicolor_classics_beckenbauer_track_pants
   price: 2800
   stock: 100
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6240ad71d0714b49bdedcf17385de57a_9366/Adicolor_Classics_Beckenbauer_Track_Pants_Brown_JP2525_25_model.jpg
 
 small_all_szn_fleece_regular_tapered_pants:
   size: 0
   product: all_szn_fleece_regular_tapered_pants
   price: 2000
   stock: 9
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/c16e99153fb74bf1aaac39172d438cbc_9366/ALL_SZN_Fleece_Regular_Tapered_Pants_Blue_JC5361_25_model.jpg
 
 small_all_arsenal_terrace_icons_track_pants:
   size: 0
   product: arsenal_terrace_icons_track_pants
   price: 3600
   stock: 2
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/4efcdc07d88646ba9d462add6e4ebbbc_9366/Arsenal_Terrace_Icons_Track_Pants_Blue_JF0545_HM5.jpg
 
 small_brasil_power_of_three_track_jacket:
   size: 0
   product: brasil_power_of_three_track_jacket
   price: 2800
   stock: 89
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ef8bf433adb8453a92abe0cbe956bbcd_9366/Brasil_Power_of_Three_Track_Jacket_Green_JJ1567_25_model.jpg
 
 small_real_madrid_vrct_jacket:
   size: 0
   product: real_madrid_vrct_jacket
   price: 6500
   stock: 1
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/efb5b7c4aa434d419c9a937a61b550f3_9366/Real_Madrid_VRCT_Jacket_Gender_Neutral_Blue_JF2589_23_hover_model.jpg
 
 small_adizero_essentials_running_singlet:
   size: 0
   product: adizero_essentials_running_singlet
   price: 1000
   stock: 1000
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/b28c5c36a5494380a4bd6f3e4ced0fb8_9366/Adizero_Essentials_Running_Singlet_Blue_IX2855_HM5.jpg

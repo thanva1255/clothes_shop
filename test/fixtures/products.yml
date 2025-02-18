@@ -3,57 +3,67 @@ premium_cali_tee:
   description: A wool tee with classic 3-stripes details.
   collection: originals
   category: shirt
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/bbbee5a37fbf42728f6699764be2fae0_9366/Premium_Cali_Tee_Black_JC6361_21_model.jpg
 
 techfit_compression:
   name: Techfit Compression
   description: A compression training tee made in part with recycled materials.
   collection: training
   category: shirt
+  image_url: https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ef341ae0c9874ef0bdfcaed300baa0fe_9366/Techfit_Training_Tee_Black_HK2337_01_laydown.jpg
 
 skate_chino_pants:
   name: Skate Chino Pants
   description: Modern chino pants built for sketeboarding.
   collection: originals
   category: pants
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/d855f396520648c18fc7c2373df9bd60_9366/3-Stripes_Skate_Chino_Pants_Brown_IU0075_21_model.jpg
 
 pre_loved_pants:
   name: Pre Loved Pants
   description: 90S-inspired sweat pants.
   collection: originals
   category: pants
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f37df95906cb446f8a9e706b190166aa_9366/Pre-Loved_Pants_Green_JC8356_21_model.jpg
 
 adicolor_classics_beckenbauer_track_pants:
   name: Adicolor Classics Beckenbauer Track Pants
   description: Archival track pants made with a blend of recycled.
   collection: originals
   category: pants
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/9730e44840a54c7f8aa43a6c96d93808_9366/Adicolor_Classics_Beckenbauer_Track_Pants_Brown_JP2525_21_model.jpg
 
 all_szn_fleece_regular_tapered_pants:
   name: ALL SZN Fleece Regular Tapered Pants
   description: soft, tapered pants made for all-day comfort.
   collection: sportswear
   category: pants
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/9eeeebcea9084edeb3b822353aacacec_9366/ALL_SZN_Fleece_Regular_Tapered_Pants_Blue_JC5361_21_model.jpg
 
 arsenal_terrace_icons_track_pants:
   name: Arsenal Terrace Icons Track Pants
   description: Arsenal terrace icons jersey.
   collection: football
   category: pants
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/01ffce8cb7f5475082b5b0a50eb61b57_9366/Arsenal_Terrace_Icons_Track_Pants_Blue_JF0545_HM1.jpg
 
 brasil_power_of_three_track_jacket:
   name: Brasil Power Of Three Track Jacket
   description: A celebration of brasilian skateboarding culture.
   collection: originals
   category: jacket
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/896e5359ce5c464baa45ef0e5d2e431f_9366/Brasil_Power_of_Three_Track_Jacket_Green_JJ1567_21_model.jpg
 
 real_madrid_vrct_jacket:
   name: Real Madrid VRCT Jacket (gender neutral)
   description: A real madrid jacket that shouts your support.
   collection: football
   category: jacket
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f5c18bc5f8d642a687f47a125888baf8_9366/Real_Madrid_VRCT_Jacket_Gender_Neutral_Blue_JF2589_21_model.jpg
 
 adizero_essentials_running_singlet:
   name: Adizero Essentials Running Singlet
   description: A lightweight running singlet made with recycled materials.
   collection: running
   category: shirt
+  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/377785fe51d14fafbb38605a328f597c_9366/Adizero_Essentials_Running_Singlet_Blue_IX2855_HM1.jpg
