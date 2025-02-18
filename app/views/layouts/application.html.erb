@@ -19,8 +19,6 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.turbo.min.js"></script>
-    <%# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"> %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -29,30 +27,30 @@
     <nav>
       <div class="grid grid-cols-4">
         <div class="col-span-1">
-          <a href="#">
-            <img src="https://www.pngplay.com/wp-content/uploads/6/Adidas-White-Logo-PNG-Clipart-Background.png" class="nav-logo" alt="Adidas Logo">
-          </a>
+            <%= link_to welcome_index_path, :class => "w-max block ml-3 mt-2" do %>
+              <% image_tag "adidas_logo.png", :class => "logo" %>
+            <% end %>
         </div>
 
         <div class="flyout-container col-span-2">
           <ul class="flyout-list">
             <li>
-              <a href="#" class="flyout-link">Home</a>
+              <%= link_to "Home", welcome_index_path, :class => "flyout-link"%>
             </li>
 
             <li>
-              <a href="#" class="flyout-link">Product</a>
+              <%= link_to "Products", products_path, :class => "flyout-link"%>
             </li>
 
             <li>
-              <a href="#" class="flyout-link">Collections</a>
+              <%= link_to "Collections", collections_index_path, :class => "flyout-link"%>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <main class="container mx-auto mt-10 px-5 flex">
+    <main class="container mx-auto mt-10 px-5">
       <%= yield %>
     </main>
   </body>

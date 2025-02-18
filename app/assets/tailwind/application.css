@@ -2,7 +2,7 @@
 
 @layer base {
     nav {
-        @apply bg-black w-full z-20 border-b border-gray-200;
+        @apply bg-black w-full z-20 border-b;
     }
 }
 
@@ -19,8 +19,8 @@
         @apply max-w-screen-xl flex mx-auto p-4;
     }
 
-    .nav-logo {
-        @apply h-16 ml-4 mt-3;
+    .logo {
+        @apply h-16 w-max;
     }
 }
 
