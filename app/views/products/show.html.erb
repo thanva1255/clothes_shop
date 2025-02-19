@@ -1,10 +1,12 @@
 <div class="show-page-container">
-    <div class="bg-green-100 h-dvh"></div>
+    <div class="h-dvh">
+        <img src=<%= @product.image_url %> alt="">
+    </div>
 
     <div class="product-detail">
         <div class="product-basic-detail">
-            <p class="mt-5 font-light">Product collection name</p>
-            <p class="mt-2 text-2xl font-bold">Product name</p>
+            <p class="mt-5 font-light"><%= @product.collection.name %></p>
+            <p class="mt-2 text-2xl font-bold"><%= @product.name %></p>
 
             <div class="mt-5">
                 <p class="font-bold">฿ 100</p>
@@ -21,7 +23,7 @@
         </div>
 
         <div>
-            <p class="mt-10">Product dresription</p>
+            <p class="mt-10"><p><%= @product.description %></p>
         </div>
     </div>
 </div>
