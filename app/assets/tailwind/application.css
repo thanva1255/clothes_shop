@@ -22,6 +22,16 @@
     .logo {
         @apply h-16 w-max;
     }
+
+    .show-page-container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .button-size {
+        @apply font-extralight px-5 py-2 bg-gray-300 hover:text-gray-300 hover:bg-black;
+    }
 }
 
 @layer utilities {
