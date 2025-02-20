@@ -1,25 +1,41 @@
-<div>
-    <p class="text-4xl font-bold mb-6 ml-1"><%= @selected_category_name %></p>
+<p class="text-4xl font-bold mb-6 ml-1"><%= @selected_category_name %></p>
 
-    <div class="flex flex-wrap gap-2.5 mb-4 pb-3 ml-1 border-b-1 text-l">
-        <% if @is_show_all_category %>
-                <%= link_to "All Product", products_path, :class => "selected_category" %>
+<div class="flex flex-wrap gap-2.5 mb-4 pb-3 ml-1 border-b-1 text-l">
+    <% if @is_show_all_category %>
+        <%=
+            link_to "All Product",
+            products_path,
+            :class => "selected-category"
+        %>
+    <% else %>
+        <%=
+            link_to "All Product",
+            products_path,
+            :class => "unselected-category"
+        %>
+    <% end %>
+
+    <% @categories.each do |category| %>
+        <% if selected_category?(@selected_category_id, category.id) %>
+            <%=
+                link_to category.name,
+                products_path(category: category.id),
+                :method => :get,
+                :class => "selected-category"
+            %>
         <% else %>
-                <%= link_to "All Product", products_path, :class => "unselected_category" %>
+            <%=
+                link_to category.name,
+                products_path(category: category.id),
+                :method => :get,
+                :class => "unselected-category"
+            %>
         <% end %>
+    <% end %>
+</div>
 
-        <% @categories.each do |category| %>
-            <% if selected_category?(@selected_category_id, category.id) %>
-                <%= link_to category.name, products_path(category: category.id), :method => :get, :class => "selected_category" %>
-            <% else %>
-                <%= link_to category.name, products_path(category: category.id), :method => :get, :class => "unselected_category" %>
-            <% end %>
-        <% end %>
-    </div>
-
-    <div class="grid grid-cols-4 gap-5">
-        <% @products.each do |product| %>
-            <%= render "product", product: product, :class => "col-span-1" %>
-        <% end %>
-    </div>
+<div class="grid grid-cols-4 gap-5">
+    <% @products.each do |product| %>
+        <%= render "product", product: product, :class => "col-span-1" %>
+    <% end %>
 </div>

@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :update_category_as_selected, only: [ :index ]
+
   def index
     @categories = Category.all
   end
