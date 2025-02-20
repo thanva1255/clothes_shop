@@ -1,9 +1,5 @@
 module ProductsHelper
   def selected_size?(size)
-    if size == params[:size]
-      true
-    else
-      false
-    end
+    size == params[:size]
   end
 end

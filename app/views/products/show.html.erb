@@ -1,39 +1,47 @@
 <div class="show-page-container">
-    <div class="h-dvh">
-        <img src=<%= @image %> alt="Product Image">
+  <div class="h-dvh">
+    <img src=<%= @image %> alt="Product Image">
+  </div>
+
+  <div class="product-detail">
+    <div class="product-basic-detail">
+      <p class="mt-5 font-light"><%= @collection %></p>
+      <p class="mt-2 text-2xl font-bold"><%= @name %></p>
+      <% unless @size.nil? %>
+        <p class="font-bold">฿ <%=  @price %></p>
+      <% end %>
     </div>
 
-    <div class="product-detail">
-        <div class="product-basic-detail">
-            <p class="mt-5 font-light"><%= @collection %></p>
-            <p class="mt-2 text-2xl font-bold"><%= @name %></p>
+    <p class="mt-10">size</p>
 
-            <% unless @size.nil? %>
-                <p class="font-bold">฿ <%=  @price %></p>
-            <% end %>
-
-        </div>
-
-        <p class="mt-10">size</p>
-
-        <div class="mt-4 flex gap-3">
-            <% @variants.each do |variant| %>
-                <% if selected_size?(variant.size) %>
-                    <%= link_to variant.size.titleize, product_path(size: variant.size), class: "selected-button-size" %>
-                <% else %>
-                    <%= link_to variant.size.titleize, product_path(size: variant.size), class: "button-size" %>
-                <% end %>
-            <% end %>
-        </div>
-
-        <div class="mt-5">
-            <% unless @size.nil? %>
-                <p class="font-bold">Stock: <%= @stock %></p>
-            <% end %>
-        </div>
-
-        <div>
-            <p class="mt-10"><p><%= @description %></p>
-        </div>
+    <div class="mt-4 flex gap-3">
+      <% @variants.each do |variant| %>
+        <% if selected_size?(variant.size) %>
+          <%= link_to(
+              variant.size.titleize,
+              product_path(size: variant.size),
+              class: "selected-button-size"
+              )
+          %>
+        <% else %>
+          <%= link_to(
+              variant.size.titleize,
+              product_path(size: variant.size),
+              class: "button-size"
+              )
+          %>
+        <% end %>
+      <% end %>
     </div>
+
+    <div class="mt-5">
+      <% unless @size.nil? %>
+        <p class="font-bold">Stock: <%= @stock %></p>
+      <% end %>
+    </div>
+
+    <div>
+      <p class="mt-10"><p><%= @description %></p>
+    </div>
+  </div>
 </div>
