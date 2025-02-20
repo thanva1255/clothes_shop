@@ -1,28 +1,7 @@
-<div class="text-4xl font-bold mb-7">Football</div>
+<div class="text-4xl font-bold mb-7"><%= @collection.name %></div>
 
 <div class="grid grid-cols-4 gap-5">
-    <div>
-        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/ef5640b96d19436db8d56ffe63383152_9366/Gazelle_Indoor_Shoes_Brown_JH5412_01_00_standard.jpg">
-        <div>Name</div>
-    </div>
-
-    <div>
-        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/ef5640b96d19436db8d56ffe63383152_9366/Gazelle_Indoor_Shoes_Brown_JH5412_01_00_standard.jpg">
-        <div>Name</div>
-    </div>
-
-    <div>
-        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/ef5640b96d19436db8d56ffe63383152_9366/Gazelle_Indoor_Shoes_Brown_JH5412_01_00_standard.jpg">
-        <div>Name</div>
-    </div>
-
-    <div>
-        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/ef5640b96d19436db8d56ffe63383152_9366/Gazelle_Indoor_Shoes_Brown_JH5412_01_00_standard.jpg">
-        <div>Name</div>
-    </div>
-
-    <div>
-        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/ef5640b96d19436db8d56ffe63383152_9366/Gazelle_Indoor_Shoes_Brown_JH5412_01_00_standard.jpg">
-        <div>Name</div>
-    </div>
+    <% @collection.products.each do |product|%>
+        <div><%= render "product", product: product%></div>
+    <% end %>
 </div>

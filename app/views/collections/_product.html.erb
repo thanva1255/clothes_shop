@@ -1,0 +1,13 @@
+<div class="h-max border-1 border-white hover:border-black  flex flex-col p-1">
+    <div>
+        <%= link_to product do %>
+              <% image_tag product.image_url %>
+        <% end %>
+    </div>
+
+    <div class="m-2">
+        <p class="hover:underline truncate"><%= link_to product.name, product %></p>
+        <p><%= product.collection.name %></p>
+        <p class="mt-2">฿ <%= product.variants.first.price.to_i %></p>
+    </div>
+</div>
