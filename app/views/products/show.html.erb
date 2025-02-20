@@ -7,8 +7,9 @@
     <div class="product-basic-detail">
       <p class="mt-5 font-light"><%= @collection %></p>
       <p class="mt-2 text-2xl font-bold"><%= @name %></p>
+
       <% unless @size.nil? %>
-        <p class="font-bold">฿ <%=  @price %></p>
+        <p class="font-bold">฿ <%= @price %></p>
       <% end %>
     </div>
 
@@ -18,16 +19,16 @@
       <% @variants.each do |variant| %>
         <% if selected_size?(variant.size) %>
           <%= link_to(
-              variant.size.titleize,
-              product_path(size: variant.size),
-              class: "selected-button-size"
+                variant.size.titleize,
+                product_path(size: variant.size),
+                class: "selected-button-size"
               )
           %>
         <% else %>
           <%= link_to(
-              variant.size.titleize,
-              product_path(size: variant.size),
-              class: "button-size"
+                variant.size.titleize,
+                product_path(size: variant.size),
+                class: "button-size"
               )
           %>
         <% end %>
