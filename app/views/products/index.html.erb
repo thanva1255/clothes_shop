@@ -1,5 +1,16 @@
-<div class="grid grid-cols-4 gap-5">
-    <% @products.each do |product| %>
-        <%= render "product", product: product, :class => "col-span-1"%>
-    <% end %>
+<div>
+    <p class="text-4xl font-bold mb-6">Products</p>
+
+    <li class="flex gap-2.5 mb-4 pb-3 ml-1 border-b-1 flex-wrap text-l">
+        <div class=" px-3 hover:bg-black hover:text-white"><p>All Product</p></div>
+        <div class=" px-3 hover:bg-black hover:text-white"><p>Shirt</p></div>
+        <div class=" px-3 hover:bg-black hover:text-white"><p>Jacket</p></div>
+        <div class=" px-3 hover:bg-black hover:text-white"><p>Pants</p></div>
+    </li>
+
+    <div class="grid grid-cols-4 gap-5">
+        <% @products.each do |product| %>
+            <%= render "product", product: product, :class => "col-span-1" %>
+        <% end %>
+    </div>
 </div>
