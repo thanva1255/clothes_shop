@@ -32,6 +32,10 @@
     .button-size {
         @apply font-extralight px-5 py-2 bg-gray-300 hover:text-gray-300 hover:bg-black;
     }
+
+    .selecting-button-size {
+        @apply font-extralight px-5 py-2 bg-black text-gray-300;
+    }
 }
 
 @layer utilities {
