@@ -11,18 +11,16 @@ class ProductsController < ApplicationController
 
   private
     def update_category_as_selected
-      category_id = params[:category]
+      category_id = params[:category_id]
 
       if category_id != nil
         selected_category = Category.find(category_id)
         @products = selected_category.products
         @selected_category_name = selected_category.name
-        @selected_category_id = selected_category.id
         @is_show_all_category = false
       else
         @products = Product.all
         @selected_category_name = "Products"
-        @selected_category_id = nil
         @is_show_all_category = true
       end
     end
