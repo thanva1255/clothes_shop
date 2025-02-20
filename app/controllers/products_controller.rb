@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
     @name = @product.name
     @collection = @product.collection.name
     @description = @product.description
+    @variants = @product.variants
 
     if @variant.nil?
       @image = @product.image_url

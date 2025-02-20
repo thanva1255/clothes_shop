@@ -17,11 +17,11 @@
         <p class="mt-10">size</p>
 
         <div class="mt-4 flex gap-3">
-            <% @product.variants.each do |variant| %>
+            <% @variants.each do |variant| %>
                 <% if selected_size?(variant.size) %>
-                    <%= link_to variant.size, product_path(size: variant.size), class: "selecting-button-size" %>
+                    <%= link_to variant.size.titleize, product_path(size: variant.size), class: "selected-button-size" %>
                 <% else %>
-                    <%= link_to variant.size, product_path(size: variant.size), class: "button-size" %>
+                    <%= link_to variant.size.titleize, product_path(size: variant.size), class: "button-size" %>
                 <% end %>
             <% end %>
         </div>
