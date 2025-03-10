@@ -1,4 +1,7 @@
+<div class="text-4xl font-bold pb-6">Collections</div>
+
 <div>
-  <h1 class="font-bold text-4xl">Collections#index</h1>
-  <p>Find me in app/views/collections/index.html.erb</p>
+  <% @collections.each do |collection| %>
+    <%= render "collection", collection: collection %>
+  <% end %>
 </div>
