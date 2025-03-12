@@ -2,6 +2,10 @@
 
 <div class="grid grid-cols-4 gap-5">
   <% @collection.products.each do |product| %>
-    <div><%= render "product", product: product %></div>
+    <div>
+      <%= render "shared/product",
+          product: product
+      %>
+    </div>
   <% end %>
 </div>

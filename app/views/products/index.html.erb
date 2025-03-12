@@ -40,6 +40,9 @@
 
 <div class="grid grid-cols-4 gap-5">
   <% @products.each do |product| %>
-    <%= render "product", product: product, class: "col-span-1" %>
+    <%= render "shared/product",
+        product: product,
+        class: "col-span-1"
+    %>
   <% end %>
 </div>
