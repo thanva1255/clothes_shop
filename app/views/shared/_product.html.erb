@@ -6,8 +6,16 @@
   </div>
 
   <div class="m-2">
-    <p class="hover:underline truncate"><%= link_to product.name, product %></p>
-    <p><%= product.collection.name %></p>
-    <p class="mt-2">฿ <%= product.variants.first.price.to_i %></p>
+    <p class="hover:underline truncate">
+      <%= link_to product.name, product %>
+    </p>
+
+    <p>
+      <%= product.collection.name %>
+    </p>
+
+    <p class="mt-2">
+      ฿ <%= product.variants.first.price.to_i %>
+    </p>
   </div>
 </div>

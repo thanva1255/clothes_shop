@@ -2,6 +2,10 @@
 
 <div class="overflow-auto whitespace-nowrap">
   <% collection.products.each do |product| %>
-    <div class="inline-flex pr-5"><%= render "product", product: product %></div>
+    <div class="inline-flex pr-5">
+      <%= render "shared/product",
+          product: product
+      %>
+    </div>
   <% end %>
 </div>

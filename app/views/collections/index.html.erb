@@ -2,6 +2,8 @@
 
 <div>
   <% @collections.each do |collection| %>
-    <%= render "collection", collection: collection %>
+    <%= render "collection-list",
+        collection: collection
+    %>
   <% end %>
 </div>

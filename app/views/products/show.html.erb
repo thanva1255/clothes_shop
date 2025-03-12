@@ -5,11 +5,18 @@
 
   <div class="product-detail">
     <div class="product-basic-detail">
-      <p class="mt-5 font-light"><%= @collection %></p>
-      <p class="mt-2 text-2xl font-bold"><%= @name %></p>
+      <p class="mt-5 font-light">
+        <%= @collection %>
+      </p>
+
+      <p class="mt-2 text-2xl font-bold">
+        <%= @name %>
+      </p>
 
       <% unless @size.nil? %>
-        <p class="font-bold">฿ <%= @price %></p>
+        <p class="font-bold">
+          ฿ <%= @price %>
+        </p>
       <% end %>
     </div>
 
@@ -37,12 +44,16 @@
 
     <div class="mt-5">
       <% unless @size.nil? %>
-        <p class="font-bold">Stock: <%= @stock %></p>
+        <p class="font-bold">
+          Stock: <%= @stock %>
+        </p>
       <% end %>
     </div>
 
     <div>
-      <p class="mt-10"><p><%= @description %></p>
+      <p class="mt-10">
+        <%= @description %>
+      </p>
     </div>
   </div>
 </div>
