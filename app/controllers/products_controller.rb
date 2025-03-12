@@ -23,6 +23,8 @@ class ProductsController < ApplicationController
     end
   end
 
+  def new; end
+
   private
     def update_category_as_selected
       category_id = params[:category_id]
