@@ -8,16 +8,19 @@ class ProductDecorator < Draper::Decorator
   end
 
   def decorated_production(product)
-      {
-        basic_data:
-          {
-            image: product.image_url,
-            collection: product.collection.name,
-            name: product.name,
-            description: product.description
-          },
-          product_variants: decorated_button_size(product)
-      }
+    {
+      basic_data: decorated_basic_data(product),
+      product_variants: decorated_button_size(product)
+    }
+  end
+
+  def decorated_basic_data(product)
+    {
+      image: product.image_url,
+      collection: product.collection.name,
+      name: product.name,
+      description: product.description
+    }
   end
 
   def decorated_button_size(product)
