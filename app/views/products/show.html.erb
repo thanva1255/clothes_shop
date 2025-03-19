@@ -1,40 +1,49 @@
 <div class="show-page-container">
+  <!-- Image Section -->
   <div class="h-dvh">
-    <img src=<%= @image %> alt="Product Image">
+    <% if params[:size].nil? %>
+      <img src="<%= @resource[:basic_data][:image] %>" alt="Product Image">
+    <% else %>
+      <img src="<%= params[:image] %>" alt="Product Image">
+    <% end %>
   </div>
 
+  <!-- Product Detail Section -->
   <div class="product-detail">
+
+    <!-- Basic Product Info -->
     <div class="product-basic-detail">
       <p class="mt-5 font-light">
-        <%= @collection %>
+        <%= @resource[:basic_data][:collection] %>
       </p>
 
       <p class="mt-2 text-2xl font-bold">
-        <%= @name %>
+        <%= @resource[:basic_data][:name] %>
       </p>
 
-      <% unless @size.nil? %>
+      <% unless params[:size].nil? %>
         <p class="font-bold">
-          ฿ <%= @price %>
+          ฿ <%= params[:price] %>
         </p>
       <% end %>
     </div>
 
-    <p class="mt-10">size</p>
+    <!-- Size Selector -->
+    <p class="mt-10">Size</p>
 
     <div class="mt-4 flex gap-3">
-      <% @variants.each do |variant| %>
-        <% if selected_size?(variant.size) %>
+      <% @resource[:product_variants].each do |variant| %>
+        <% if selected_size?(variant[:label]) %>
           <%= link_to(
-                variant.size.titleize,
-                product_path(size: variant.size),
+                variant[:label].titleize,
+                variant[:path],
                 class: "selected-button-size"
               )
           %>
         <% else %>
           <%= link_to(
-                variant.size.titleize,
-                product_path(size: variant.size),
+                variant[:label].titleize,
+                variant[:path],
                 class: "button-size"
               )
           %>
@@ -42,18 +51,21 @@
       <% end %>
     </div>
 
-    <div class="mt-5">
-      <% unless @size.nil? %>
+    <!-- Stock Info -->
+    <% unless params[:size].nil? %>
+      <div class="mt-5">
         <p class="font-bold">
-          Stock: <%= @stock %>
+          Stock: <%= params[:stock] %>
         </p>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
 
-    <div>
-      <p class="mt-10">
-        <%= @description %>
+    <!-- Description -->
+    <div class="mt-10">
+      <p>
+        <%= @resource[:basic_data][:description] %>
       </p>
     </div>
+
   </div>
 </div>
