@@ -30,7 +30,10 @@
         <div class="text-4xl mb-6">New Product</div>
       </header>
 
-      <%= form_with do |form| %>
+      <%= form_with url: products_path,
+          method: :post,
+          data: { turbo: false } do |form|
+      %>
         <div class="grid grid-cols-6 gap-y-6 gap-x-4 mt-6">
           <div class="col-span-4 col-start-2">
             <%= form.label :name,

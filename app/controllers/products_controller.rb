@@ -26,6 +26,54 @@ class ProductsController < ApplicationController
   def new; end
 
   def create
+    product = Product.new(
+      name: params[:name],
+      image_url: params[:image_url],
+      description: params[:description],
+      collection_id: params[:collection_id],
+      category_id: params[:category_id]
+    )
+
+    product.save
+
+    small_size = Variant.new(
+      product_id: product.id,
+      size: "small",
+      price: params[:size_s_price],
+      stock: params[:size_s_stock],
+      image_url: params[:size_s_image_url]
+    )
+    medium_size = Variant.new(
+      product_id: product.id,
+      size: "medium",
+      price: params[:size_m_price],
+      stock: params[:size_m_stock],
+      image_url: params[:size_m_image_url]
+    )
+    large_size = Variant.new(
+      product_id: product.id,
+      size: "large",
+      price: params[:size_l_price],
+      stock: params[:size_l_stock],
+      image_url: params[:size_l_image_url]
+    )
+    extra_large_size = Variant.new(
+      product_id: product.id,
+      size: "extra_large",
+      price: params[:size_xl_price],
+      stock: params[:size_xl_stock],
+      image_url: params[:size_xl_image_url]
+    )
+
+    small_size.save
+    medium_size.save
+    large_size.save
+    extra_large_size.save
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html { redirect_to products_path }
+    end
   end
 
   private

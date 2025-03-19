@@ -4,6 +4,6 @@ export default class extends Controller {
   static targets = [ "modal" ]
 
   closeModal(event) {
-    this.modalTarget.remove()
+    // this.modalTarget.remove()
   }
 }

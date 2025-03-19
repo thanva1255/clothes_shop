@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get "welcome/index"
 
   resources :collections
-  resources :products
+  resources :products do
+    resources :variant
+  end
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
