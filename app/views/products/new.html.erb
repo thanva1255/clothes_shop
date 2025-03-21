@@ -1,0 +1,288 @@
+<%= turbo_frame_tag "modal", target: "_top" do %>
+  <div class="w-full h-full fixed bottom-0 left-0 top-0 right-0 z-10" data-controller="modal" data-modal-target="modal">
+    <div class="bg-white h-[70%] w-[50%] overflow-y-auto mt-30 m-auto p-10">
+      <button
+        type="button"
+        data-action="click->modal#closeModal"
+        class="
+          bg-white
+            float-right
+            rounded-md
+            p-2 inline-flex
+            items-center
+            justify-center
+            text-gray-400
+            hover:text-gray-500
+            hover:bg-gray-100
+            focus:outline-none
+            focus:ring-2
+            focus:ring-inset
+            focus:ring-black"
+        >
+        <span class="sr-only">Close</span>
+
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <header class="border-b-1">
+        <div class="text-4xl mb-6">New Product</div>
+      </header>
+
+      <%= form_with url: products_path,
+          method: :post,
+          data: { turbo: false } do |form|
+      %>
+        <div class="grid grid-cols-6 gap-y-6 gap-x-4 mt-6">
+          <div class="col-span-4 col-start-2">
+            <%= form.label :name,
+                "Name",
+                class: "block mb-2 font-medium"
+            %>
+            <%= form.text_field :name,
+                required: true,
+                class: "bg-gray-100 rounded-lg block w-full p-2.5"
+            %>
+          </div>
+
+          <div class="col-span-4 col-start-2">
+            <%= form.label :image_url,
+                "Image URL",
+                class: "block mb-2 font-medium"
+            %>
+            <%= form.text_field :image_url,
+                required: true,
+                class: "bg-gray-100 rounded-lg block w-full p-2.5"
+            %>
+          </div>
+
+          <div class="col-span-4 col-start-2">
+            <%= form.label :description,
+                "Description",
+                class: "block mb-2 font-medium"
+            %>
+            <%= form.text_field :description,
+                required: true,
+                class: "bg-gray-100 rounded-lg block w-full p-2.5"
+            %>
+          </div>
+
+          <div class="col-span-4 col-start-2">
+            <%= form.label :collection,
+                class: "block mb-2 font-medium"
+            %>
+            <%= form.collection_select :collection_id,
+                Collection.all,
+                :id,
+                :name,
+                {
+                  prompt: 'Select Collection',
+                  required: true
+                },
+                class: "bg-gray-100 rounded-lg block w-full p-2.5"
+            %>
+          </div>
+
+          <div class="col-span-4 col-start-2">
+            <%= form.label :category,
+                class: "block mb-2 font-medium"
+            %>
+            <%= form.collection_select :category_id,
+                Category.all,
+                :id,
+                :name,
+                {
+                  prompt: 'Select Category',
+                  required: true
+                },
+                class: "bg-gray-100 rounded-lg block w-full p-2.5"
+            %>
+          </div>
+
+          <div class="col-span-4 col-start-2">
+            <hr>
+          </div>
+
+          <div class="col-span-4 col-start-2 " data-controller="size-tab">
+            <div class="text-3xl">Size</div>
+
+            <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 mb-4">
+              <li class="me-2">
+                <button
+                  type="button"
+                  data-action="click->size-tab#changeTabSize"
+                  data-size-tab-size-param="s"
+                  data-size-tab-target="button buttonDefault"
+                  class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-300"
+                >
+                  S
+                </button>
+              </li>
+              <li class="me-2">
+                <button
+                  type="button"
+                  data-action="click->size-tab#changeTabSize"
+                  data-size-tab-size-param="m"
+                  data-size-tab-target="button"
+                  class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-300"
+                >
+                  M
+                </button>
+              </li>
+              <li class="me-2">
+                <button
+                  type="button"
+                  data-action="click->size-tab#changeTabSize"
+                  data-size-tab-size-param="l"
+                  data-size-tab-target="button"
+                  class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-300"
+                >
+                  L
+                </button>
+              </li>
+              <li class="me-2">
+                <button
+                  type="button"
+                  data-action="click->size-tab#changeTabSize"
+                  data-size-tab-size-param="xl"
+                  data-size-tab-target="button"
+                  class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-300"
+                >
+                  XL
+                </button>
+              </li>
+            </ul>
+
+            <div data-size-tab-target="s" class="row-span-3">
+              <%= form.label :size_s_stock,
+                  "Stock",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.number_field :size_s_stock,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6",
+                  min: 1,
+                  step: 1,
+                  required: true
+              %>
+              <%= form.label :size_s_price,
+                  "Price",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.number_field :size_s_price,
+                  required: true,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+              %>
+              <%= form.label :size_s_image_url,
+                  "Image URL",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.text_field :size_s_image_url,
+                  required: true,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+              %>
+            </div>
+
+            <div data-size-tab-target="m" class="row-span-3">
+              <%= form.label :size_m_stock,
+                  "Stock",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.number_field :size_m_stock,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6",
+                  min: 1,
+                  step: 1,
+                  required: true
+              %>
+              <%= form.label :size_m_price,
+                  "Price",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.number_field :size_m_price,
+                  required: true,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+              %>
+              <%= form.label :size_m_image_url,
+                  "Image URL",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.text_field :size_m_image_url,
+                  required: true,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+              %>
+            </div>
+
+            <div data-size-tab-target="l" class="row-span-3">
+              <%= form.label :size_l_stock,
+                  "Stock",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.number_field :size_l_stock,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6",
+                  min: 1,
+                  step: 1,
+                  required: true
+              %>
+              <%= form.label :size_l_price,
+                  "Price",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.number_field :size_l_price,
+                  required: true,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+              %>
+              <%= form.label :size_l_image_url,
+                  "Image URL",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.text_field :size_l_image_url,
+                  required: true,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+              %>
+            </div>
+
+            <div data-size-tab-target="xl" class="row-span-3">
+              <%= form.label :size_xl_stock,
+                  "Stock",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.number_field :size_xl_stock,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6",
+                  min: 1,
+                  step: 1,
+                  required: true
+              %>
+              <%= form.label :size_xl_price,
+                  "Price",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.number_field :size_xl_price,
+                  required: true,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+              %>
+              <%= form.label :size_xl_image_url,
+                  "Image URL",
+                  class: "block mb-2 font-medium"
+              %>
+              <%= form.text_field :size_xl_image_url,
+                  required: true,
+                  class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+              %>
+            </div>
+          </div>
+        </div>
+        <footer class="py-10 relative">
+          <div class="bg-gray-100 px-6 py-2 rounded-lg absolute right-0 hover:bg-gray-200">
+              <%= form.submit "Save", class: "new-button" %>
+          </div>
+        </footer>
+
+        <div
+          data-action="click->modal#closeModal"
+          class="w-full h-full bg-black opacity-50 fixed bottom-0 -z-10 left-0 top-0 right-0 text-center"
+        >
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
