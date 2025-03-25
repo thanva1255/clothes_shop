@@ -1,4 +1,24 @@
-<div class="text-4xl font-bold pb-6">Collections</div>
+<div class="flex items-start justify-between">
+  <div class="text-4xl font-bold pb-6">Collections</div>
+
+  <%= link_to "+",
+      new_collection_path,
+      data: { turbo_frame: 'modal'},
+      type: :button,
+      class: "inline-flex
+        items-center
+        justify-center
+        w-10
+        h-10
+        text-xl
+        text-gray-400
+        hover:text-gray-500
+        hover:bg-gray-100
+        font-medium
+        rounded-xl
+        group"
+  %>
+</div>
 
 <div>
   <% @collections.each do |collection| %>
