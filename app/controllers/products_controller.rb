@@ -19,6 +19,10 @@ class ProductsController < ApplicationController
 
   def new; end
 
+  def edit
+    @products = Product.find(params[:id])
+  end
+
   def create
     product = @product_domain.create_product(
       name: params[:name],
