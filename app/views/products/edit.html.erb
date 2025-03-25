@@ -30,7 +30,7 @@
         <div class="text-4xl mb-6">Edit Product</div>
       </header>
 
-      <%= form_with url: products_path,
+      <%= form_with url: product_path,
           method: :patch,
           data: { turbo: false } do |form|
       %>
@@ -82,9 +82,8 @@
                 {
                   prompt: 'Select Collection',
                   required: true,
-                  selected: @product.collection.name
+                  selected: @product.collection.id
                 },
-                selected: @product.collection.name,
                 class: "bg-gray-100 rounded-lg block w-full p-2.5"
             %>
           </div>
@@ -100,7 +99,7 @@
                 {
                   prompt: 'Select Category',
                   required: true,
-                  selected: @product.category.name
+                  selected: @product.collection.id
                 },
                 class: "bg-gray-100 rounded-lg block w-full p-2.5"
             %>
