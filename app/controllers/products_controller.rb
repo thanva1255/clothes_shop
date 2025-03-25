@@ -19,6 +19,26 @@ class ProductsController < ApplicationController
 
   def new; end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product_domain.update_product(
+      id: params[:id],
+      name: params[:name],
+      image_url: params[:image_url],
+      description: params[:description],
+      collection_id: params[:collection_id],
+      category_id: params[:category_id]
+    )
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html { redirect_to products_path }
+    end
+  end
+
   def create
     product = @product_domain.create_product(
       name: params[:name],
