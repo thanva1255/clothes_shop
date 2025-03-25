@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
   def new; end
 
   def edit
-    @products = Product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def create
