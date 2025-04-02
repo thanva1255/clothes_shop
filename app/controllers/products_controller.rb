@@ -86,6 +86,9 @@ class ProductsController < ApplicationController
     end
   end
 
+  def delete_product_modal
+  end
+
   private
     def update_category_as_selected
       category_id = params[:category_id]

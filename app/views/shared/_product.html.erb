@@ -1,9 +1,35 @@
-<div class="h-max border-1 border-white hover:border-black flex flex-col p-1">
+<div class="h-max border-1 border-white hover:border-black flex flex-col p-1 relative">
   <div>
     <%= link_to product do %>
       <% image_tag product.image_url, class: "max-h-90" %>
     <% end %>
   </div>
+
+  <%= link_to "x",
+      delete_modal_product_path(product),
+      class: "
+        bg-red-500
+        px-2
+        text-sm
+        shadow-sm
+        hover:shadow-lg
+        font-medium
+        tracking-wider
+        border-2
+        border-red-500
+        text-white
+        m-auto
+        rounded-full
+        absolute
+        right-0
+        mt-4
+        mr-4",
+      data: { turbo_frame: 'modal'}
+  %>
+
+  <p class="hover:underline mt-2">
+        <%= link_to "Delete", delete_modal_product_path(product), data: { turbo_frame: 'modal'}  %>
+  </p>
 
   <div class="m-2">
     <p class="hover:underline truncate">
