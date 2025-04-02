@@ -28,37 +28,15 @@ class ProductsController < ApplicationController
       category_id: params[:category_id]
     )
 
-    @variant_domain.create_variant(
-      product_id: product.id,
-      size: "small",
-      price: params[:size_s_price],
-      stock: params[:size_s_stock],
-      image_url: params[:size_s_image_url]
-    )
-
-    @variant_domain.create_variant(
-      product_id: product.id,
-      size: "medium",
-      price: params[:size_m_price],
-      stock: params[:size_m_stock],
-      image_url: params[:size_m_image_url]
-    )
-
-    @variant_domain.create_variant(
-      product_id: product.id,
-      size: "large",
-      price: params[:size_l_price],
-      stock: params[:size_l_stock],
-      image_url: params[:size_l_image_url]
-    )
-
-    @variant_domain.create_variant(
-      product_id: product.id,
-      size: "extra_large",
-      price: params[:size_xl_price],
-      stock: params[:size_xl_stock],
-      image_url: params[:size_xl_image_url]
-    )
+    params[:size].each do |key, value|
+       @variant_domain.create_variant(
+       product_id: product.id,
+       size: value[:size_name].to_i,
+       price: value[:price].to_i,
+       stock: value[:stock].to_i,
+       image_url: value[:image_url]
+     )
+    end
 
     respond_to do |format|
       format.turbo_stream
