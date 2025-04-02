@@ -27,10 +27,6 @@
       data: { turbo_frame: 'modal'}
   %>
 
-  <p class="hover:underline mt-2">
-        <%= link_to "Delete", delete_modal_product_path(product), data: { turbo_frame: 'modal'}  %>
-  </p>
-
   <div class="m-2">
     <p class="hover:underline truncate">
       <%= link_to product.name, product %>

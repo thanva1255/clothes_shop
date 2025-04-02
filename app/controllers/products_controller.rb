@@ -86,7 +86,12 @@ class ProductsController < ApplicationController
     end
   end
 
-  def delete_product_modal
+  def destroy
+    @product_domain.delete_product(params[:id])
+
+    session[:return_to] ||= request.referer
+
+    redirect_to session.delete(:return_to)
   end
 
   private
