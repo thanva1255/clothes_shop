@@ -86,6 +86,14 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    @product_domain.delete_product(params[:id])
+
+    session[:return_to] ||= request.referer
+
+    redirect_to session.delete(:return_to)
+  end
+
   private
     def update_category_as_selected
       category_id = params[:category_id]

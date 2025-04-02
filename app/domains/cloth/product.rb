@@ -41,4 +41,8 @@ class Cloth::Product
 
     product
   end
+
+  def delete_product(id)
+    Product.find(id).destroy
+  end
 end

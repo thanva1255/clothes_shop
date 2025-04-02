@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :collections
   resources :products do
     resources :variant
+
+    member do
+      get "delete_modal"
+    end
   end
 
   root "welcome#index"

@@ -1,10 +1,3 @@
-premium_cali_tee:
-  name: Premium Cali Tee
-  description: A wool tee with classic 3-stripes details.
-  collection: originals
-  category: shirt
-  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/bbbee5a37fbf42728f6699764be2fae0_9366/Premium_Cali_Tee_Black_JC6361_21_model.jpg
-
 techfit_compression:
   name: Techfit Compression
   description: A compression training tee made in part with recycled materials.

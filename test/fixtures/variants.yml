@@ -1,31 +1,3 @@
-small_premiumcalitee:
-  size: 0
-  product: premium_cali_tee
-  price: 2700
-  stock: 30
-  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/20028b4abe2a4d65815dd7c4fecdfd89_9366/Premium_Cali_Tee_Black_JC6361_23_hover_model.jpg
-
-medium_premium_cali_tee:
-  size: 1
-  product: premium_cali_tee
-  price: 2700
-  stock: 26
-  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/d2b96a67bde84121957193578b34ef68_9366/Premium_Cali_Tee_Black_JC6361_25_model.jpg
-
-large_premium_cali_tee:
-  size: 2
-  product: premium_cali_tee
-  price: 2700
-  stock: 15
-  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/1ac3003768c949aea762bd2c3cb6aa63_9366/Premium_Cali_Tee_Black_JC6361_01_laydown.jpg
-
-extra_large_premium_cali_tee:
-  size: 3
-  product: premium_cali_tee
-  price: 2700
-  stock: 23
-  image_url: https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/e0af76207e29465883d01b9f26cfc535_9366/Premium_Cali_Tee_Black_JC6361_42_detail.jpg
-
 small_techfit_compression:
   size: 0
   product: techfit_compression
