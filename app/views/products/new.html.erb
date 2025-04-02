@@ -160,8 +160,9 @@
                   "Stock",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.number_field :size_s_stock,
+              <%= form.number_field "size[s][stock]",
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6",
+                  value: 1,
                   min: 1,
                   step: 1,
                   required: true
@@ -170,18 +171,26 @@
                   "Price",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.number_field :size_s_price,
+              <%= form.number_field "size[s][price]",
                   required: true,
+                  value: 1,
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
               %>
               <%= form.label :size_s_image_url,
                   "Image URL",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.text_field :size_s_image_url,
+              <%= form.text_field "size[s][image_url]",
                   required: true,
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
               %>
+
+              <div hidden>
+                <%= form.number_field "size[s][size_name]",
+                    value: 0,
+                    class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+                %>
+              </div>
             </div>
 
             <div data-size-tab-target="m" class="row-span-3">
@@ -189,8 +198,9 @@
                   "Stock",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.number_field :size_m_stock,
+              <%= form.number_field "size[m][stock]",
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6",
+                  value: 1,
                   min: 1,
                   step: 1,
                   required: true
@@ -199,7 +209,8 @@
                   "Price",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.number_field :size_m_price,
+              <%= form.number_field "size[m][price]",
+                  value: 1,
                   required: true,
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
               %>
@@ -207,10 +218,17 @@
                   "Image URL",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.text_field :size_m_image_url,
+              <%= form.text_field "size[m][image_url]",
                   required: true,
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
               %>
+
+              <div hidden>
+                <%= form.number_field "size[m][size_name]",
+                    value: 1,
+                    class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+                %>
+              </div>
             </div>
 
             <div data-size-tab-target="l" class="row-span-3">
@@ -218,8 +236,9 @@
                   "Stock",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.number_field :size_l_stock,
+              <%= form.number_field "size[l][stock]",
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6",
+                  value: 1,
                   min: 1,
                   step: 1,
                   required: true
@@ -228,18 +247,26 @@
                   "Price",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.number_field :size_l_price,
+              <%= form.number_field "size[l][price]",
                   required: true,
+                  value: 1,
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
               %>
               <%= form.label :size_l_image_url,
                   "Image URL",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.text_field :size_l_image_url,
+              <%= form.text_field "size[l][image_url]",
                   required: true,
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
               %>
+
+              <div hidden>
+                <%= form.number_field "size[l][size_name]",
+                    value: 2,
+                    class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+                %>
+              </div>
             </div>
 
             <div data-size-tab-target="xl" class="row-span-3">
@@ -247,8 +274,9 @@
                   "Stock",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.number_field :size_xl_stock,
+              <%= form.number_field "size[xl][stock]",
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6",
+                  value: 1,
                   min: 1,
                   step: 1,
                   required: true
@@ -257,18 +285,26 @@
                   "Price",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.number_field :size_xl_price,
+              <%= form.number_field "size[xl][price]",
                   required: true,
+                  value: 1,
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
               %>
               <%= form.label :size_xl_image_url,
                   "Image URL",
                   class: "block mb-2 font-medium"
               %>
-              <%= form.text_field :size_xl_image_url,
+              <%= form.text_field "size[xl][image_url]",
                   required: true,
                   class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
               %>
+
+              <div hidden>
+                <%= form.number_field "size[xl][size_name]",
+                    value: 3,
+                    class: "bg-gray-100 rounded-lg block w-full p-2.5 mb-6"
+                %>
+              </div>
             </div>
           </div>
         </div>
