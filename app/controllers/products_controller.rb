@@ -29,13 +29,13 @@ class ProductsController < ApplicationController
     )
 
     params[:size].each do |key, value|
-       @variant_domain.create_variant(
-       product_id: product.id,
-       size: value[:size_name].to_i,
-       price: value[:price].to_i,
-       stock: value[:stock].to_i,
-       image_url: value[:image_url]
-     )
+      @variant_domain.create_variant(
+        product_id: product.id,
+        size: value[:size_name].to_i,
+        price: value[:price].to_i,
+        stock: value[:stock].to_i,
+        image_url: value[:image_url]
+      )
     end
 
     respond_to do |format|
