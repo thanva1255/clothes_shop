@@ -2,16 +2,15 @@ class Product::ProductDecorator < Draper::Decorator
   delegate_all
 
   def decorated
-    product = object
+    product, variant= object
 
-    Product::ProductDecorator.new(decorated_production(product))
-  end
-
-  def decorated_production(product)
-    {
-      basic_data: decorated_basic_data(product),
-      product_variants: decorated_button_size(product)
-    }
+    Product::ProductDecorator.new(
+      {
+        basic_data: decorated_basic_data(product),
+        product_variants: decorated_button_size(product),
+        variant_selected: decorated_variant_selected(variant)
+      }
+    )
   end
 
   def decorated_basic_data(product)
@@ -24,19 +23,25 @@ class Product::ProductDecorator < Draper::Decorator
   end
 
   def decorated_button_size(product)
-      varaints = product.variants
+      variants = product.variants
 
-      varaints.map do |varaint|
+      variants.map do |variant|
         {
-          label: varaint.size,
+          id: variant.id,
+          label: variant.size,
           path: h.product_path(
-            id: product.id,
-            size: varaint.size,
-            stock: varaint.stock,
-            price: varaint.price,
-            image: varaint.image_url
+            product,
+            variant: variant.size.dasherize
           )
         }
       end
+  end
+
+  def decorated_variant_selected(variant)
+    {
+      image: variant&.image_url,
+      price: variant&.price,
+      stock: variant&.stock
+    }
   end
 end
