@@ -63,6 +63,16 @@
               </li>
             </ul>
           </div>
+
+          <div class="col-span-1 flex justify-end items-center">
+            <%= link_to(
+                  "Sign out",
+                  session_path,
+                  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                  class: "py-2 px-6 text-white hover:text-gray-300 text-l"
+                )
+            %>
+          </div>
         </div>
       </nav>
     <% end %>

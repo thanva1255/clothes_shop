@@ -4,6 +4,7 @@ module Authentication
   included do
     before_action :require_authentication
     helper_method :authenticated?
+    helper_method :current_user
   end
 
   class_methods do
@@ -43,6 +44,10 @@ module Authentication
         Current.session = session
         cookies.signed.permanent[:session_id] = { value: session.id, httponly: true, same_site: :lax }
       end
+    end
+
+    def current_user
+      resume_session.user
     end
 
     def terminate_session
