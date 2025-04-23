@@ -1,6 +1,6 @@
 module ProductsHelper
-  def selected_size?(variant_id)
-    variant_id == params[:variant].to_i
+  def selected_size?(size)
+    size == params[:variant]
   end
 
   def selected_category?(category_id)
