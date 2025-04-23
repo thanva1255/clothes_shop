@@ -11,7 +11,6 @@ class ProductsController < ApplicationController
     category_id = Category.find_by(name: params[:category].to_s)&.id || nil
 
     @products = Product.by_category_id(category_id)
-
     @categories_filter_bar = Product::CategoryButtonGroupDecorator.new([]).decorated
   end
 
