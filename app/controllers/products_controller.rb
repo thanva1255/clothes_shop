@@ -8,7 +8,10 @@ class ProductsController < ApplicationController
     @variant_domain = Cloth::Variant.new
   end
   def index
-    @categories = Category.all
+    category_id = Category.find_by(name: params[:category].to_s)&.id || nil
+
+    @products = Product.by_category_id(category_id)
+    @categories_filter_bar = Product::CategoryButtonGroupDecorator.new([]).decorated
   end
 
   def show

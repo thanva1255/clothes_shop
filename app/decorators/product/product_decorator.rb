@@ -1,4 +1,4 @@
-class ProductDecorator < Draper::Decorator
+class Product::ProductDecorator < Draper::Decorator
   delegate_all
 
   def decorated
