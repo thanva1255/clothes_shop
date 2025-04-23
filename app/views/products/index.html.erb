@@ -1,35 +1,19 @@
 <p class="text-4xl font-bold mb-6 ml-1"><%= @selected_category_name %></p>
 
 <div class="flex flex-wrap gap-2.5 mb-4 pb-3 ml-1 border-b-1 text-l">
-  <% if @is_show_all_category %>
-    <%= link_to(
-          "All Product",
-          products_path,
-          class: "selected-category"
-        )
-    %>
-  <% else %>
-    <%= link_to(
-          "All Product",
-          products_path,
-          class: "unselected-category"
-        )
-    %>
-  <% end %>
-
-  <% @categories.each do |category| %>
-    <% if selected_category?(category.id) %>
+  <% @categories_filter_bar[:buttons].each do |category_filter_button| %>
+    <% if params[:category] == category_filter_button[:value] %>
       <%= link_to(
-            category.name,
-            products_path(category_id: category.id),
+            category_filter_button[:label],
+            products_path(category: category_filter_button[:value]),
             method: :get,
-            class: "selected-category"
+            class: "selected-category hover:bg-gray-400"
           )
       %>
     <% else %>
       <%= link_to(
-            category.name,
-            products_path(category_id: category.id),
+            category_filter_button[:label],
+            products_path(category: category_filter_button[:value]),
             method: :get,
             class: "unselected-category"
           )
