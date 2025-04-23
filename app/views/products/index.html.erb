@@ -23,9 +23,11 @@
 </div>
 
 <div class="grid grid-cols-4 gap-5">
-  <div class="col-span-1 items-center justify-center m-auto">
-    <%= link_to "+", new_product_path, class: "hover:bg-gray-200 text-3xl font-bold rounded-full h-32 w-32 flex items-center justify-center bg-gray-100", data: { turbo_frame: 'modal'} %>
-  </div>
+  <% if current_user.is_admin %>
+    <div class="col-span-1 items-center justify-center m-auto">
+      <%= link_to "+", new_product_path, class: "hover:bg-gray-200 text-3xl font-bold rounded-full h-32 w-32 flex items-center justify-center bg-gray-100", data: { turbo_frame: 'modal'} %>
+    </div>
+  <% end %>
 
   <% @products.each do |product| %>
     <%= render "shared/product",

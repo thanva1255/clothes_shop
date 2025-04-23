@@ -1,0 +1,9 @@
+one:
+  email_address: admin@mail.com
+  password_digest: <%= BCrypt::Password.create("123") %>
+  is_admin: true
+
+two:
+  email_address: user@mail.com
+  password_digest: <%= BCrypt::Password.create("123") %>
+  is_admin: false

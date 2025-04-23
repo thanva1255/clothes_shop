@@ -24,46 +24,58 @@
   </head>
 
   <body>
-    <nav>
-      <div class="grid grid-cols-4">
-        <div class="col-span-1">
-            <%= link_to welcome_index_path, class: "w-max block ml-3 mt-2" do %>
-              <% image_tag "adidas_logo.png", class: "logo" %>
-            <% end %>
+    <% if authenticated? %>
+      <nav>
+        <div class="grid grid-cols-4">
+          <div class="col-span-1">
+              <%= link_to welcome_index_path, class: "w-max block ml-3 mt-2" do %>
+                <% image_tag "adidas_logo.png", class: "logo" %>
+              <% end %>
+          </div>
+
+          <div class="flyout-container col-span-2">
+            <ul class="flyout-list">
+              <li>
+                <%= link_to(
+                      "Home",
+                      welcome_index_path,
+                      class: "flyout-link"
+                    )
+                %>
+              </li>
+
+              <li>
+                <%= link_to(
+                      "Products",
+                      products_path,
+                      class: "flyout-link"
+                    )
+                %>
+              </li>
+
+              <li>
+                <%= link_to(
+                      "Collections",
+                      collections_path,
+                      class: "flyout-link"
+                    )
+                %>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-span-1 flex justify-end items-center">
+            <%= link_to(
+                  "Sign out",
+                  session_path,
+                  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                  class: "py-2 px-6 text-white hover:text-gray-300 text-l"
+                )
+            %>
+          </div>
         </div>
-
-        <div class="flyout-container col-span-2">
-          <ul class="flyout-list">
-            <li>
-              <%= link_to(
-                    "Home",
-                    welcome_index_path,
-                    class: "flyout-link"
-                  )
-              %>
-            </li>
-
-            <li>
-              <%= link_to(
-                    "Products",
-                    products_path,
-                    class: "flyout-link"
-                  )
-              %>
-            </li>
-
-            <li>
-              <%= link_to(
-                    "Collections",
-                    collections_path,
-                    class: "flyout-link"
-                  )
-              %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    <% end %>
 
     <main class="container mx-auto mt-10 px-5">
       <%= turbo_frame_tag "modal" %>
