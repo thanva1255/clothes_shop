@@ -4,7 +4,7 @@ class Product::ProductDecorator < Draper::Decorator
   def decorated
     product, variant= object
 
-    ProductDecorator.new(
+    Product::ProductDecorator.new(
       {
         basic_data: decorated_basic_data(product),
         product_variants: decorated_button_size(product),
@@ -31,7 +31,7 @@ class Product::ProductDecorator < Draper::Decorator
           label: variant.size,
           path: h.product_path(
             product,
-            variant: variant.id
+            variant: variant.size.dasherize
           )
         }
       end
