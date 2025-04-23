@@ -27,7 +27,6 @@ class Product::ProductDecorator < Draper::Decorator
 
       variants.map do |variant|
         {
-          id: variant.id,
           label: variant.size,
           path: h.product_path(
             product,

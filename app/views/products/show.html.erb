@@ -33,7 +33,7 @@
 
     <div class="mt-4 flex gap-3">
       <% @resource[:product_variants].each do |variant| %>
-        <% if selected_size?(variant[:id]) %>
+        <% if selected_size?(variant[:label]) %>
           <%= link_to(
                 variant[:label].titleize,
                 variant[:path],
