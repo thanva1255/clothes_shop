@@ -1,10 +1,10 @@
-class ProductDecorator < Draper::Decorator
+class Product::ProductDecorator < Draper::Decorator
   delegate_all
 
   def decorated
     product = object
 
-    ProductDecorator.new(decorated_production(product))
+    Product::ProductDecorator.new(decorated_production(product))
   end
 
   def decorated_production(product)
