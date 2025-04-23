@@ -1,10 +1,10 @@
 <div class="show-page-container">
   <!-- Image Section -->
   <div class="h-dvh">
-    <% if params[:size].nil? %>
+    <% if params[:variant].nil? %>
       <img src="<%= @resource[:basic_data][:image] %>" alt="Product Image">
     <% else %>
-      <img src="<%= params[:image] %>" alt="Product Image">
+      <img src="<%= @resource[:variant_selected][:image] %>" alt="Product Image">
     <% end %>
   </div>
 
@@ -21,9 +21,9 @@
         <%= @resource[:basic_data][:name] %>
       </p>
 
-      <% unless params[:size].nil? %>
+      <% unless params[:variant].nil? %>
         <p class="font-bold">
-          ฿ <%= params[:price] %>
+          ฿ <%= @resource[:variant_selected][:price] %>
         </p>
       <% end %>
     </div>
@@ -33,7 +33,7 @@
 
     <div class="mt-4 flex gap-3">
       <% @resource[:product_variants].each do |variant| %>
-        <% if selected_size?(variant[:label]) %>
+        <% if selected_size?(variant[:id]) %>
           <%= link_to(
                 variant[:label].titleize,
                 variant[:path],
@@ -52,10 +52,10 @@
     </div>
 
     <!-- Stock Info -->
-    <% unless params[:size].nil? %>
+    <% unless params[:variant].nil? %>
       <div class="mt-5">
         <p class="font-bold">
-          Stock: <%= params[:stock] %>
+          Stock: <%= @resource[:variant_selected][:stock] %>
         </p>
       </div>
     <% end %>

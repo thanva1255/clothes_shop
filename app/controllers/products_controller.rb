@@ -13,8 +13,9 @@ class ProductsController < ApplicationController
 
   def show
     product = Product.find(params[:id])
+    variant = Variant.find(params[:variant]) if params[:variant].present?
 
-    @resource = ProductDecorator.new(product).decorated
+    @resource = ProductDecorator.new([ product, variant ]).decorated
   end
 
   def new; end
