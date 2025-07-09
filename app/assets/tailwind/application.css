@@ -4,8 +4,6 @@
 @layer base {
   nav {
     @apply bg-black w-full z-20 border-b;
-
-    test
   }
 }
 
