@@ -3,7 +3,38 @@
 @layer base {
   nav {
     @apply bg-black w-full z-20 border-b;
+    sad
   }
+
+  td {
+    @apply text-center
+      text-sm
+      px-2.5
+      py-2
+      xl:text-base
+      xl:px-3
+      xl:py-4
+      border-2;
+  }
+
+  th {
+    @apply text-sm
+      font-bold
+      px-3
+      py-4
+      lg:text-base;
+  }
+
+  hr {
+    @apply mx-auto
+      my-2
+      h-[2px]
+      w-full
+      rounded-sm
+      border-0
+      bg-gray-200;
+  }
+
 }
 
 @layer components {
