@@ -12,7 +12,7 @@ on:
     branches: [ "main" ]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-15-large
     services:
       postgres:
         image: postgres:11-alpine
@@ -44,7 +44,7 @@ jobs:
         run: bin/dev
 
   lint:
-    runs-on: ubuntu-latest
+    runs-on: macos-15-large
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
